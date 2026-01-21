@@ -16,7 +16,7 @@ regForm.addEventListener("submit", async function (e) {
   }
 });
 
-function mostrarPopup(redireccion = "login.html") {
+function mostrarPopup(redireccion = "index.html") {
   const popup = document.getElementById("popup");
   popup.classList.remove("hidden");
 
