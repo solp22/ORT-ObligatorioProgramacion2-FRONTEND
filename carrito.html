@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schiaparelli - Obligatorio Programación 2</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="carrito.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+<body>
+    <header>
+      <a href="home.html"><img src="img/logo.png" alt="" /></a>
+      <nav>
+        <a href="home.html" class="hover-underline-animation">Inicio</a>
+        <a href="catalogo.html" class="hover-underline-animation">Catálogo</a>
+        <a href="carrito.html" class="hover-underline-animation">Carrito</a>
+      </nav>
+    </header>
+
+<main>
+
+
+<div id="carrito">
+  <div class="wrap">
+    <div class="cart">
+      <div class="back">
+        <a href="home.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" ><path d="M15 18l-6-6 6-6" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div>
+          <div style="font-weight:700"></div>
+        </div>
+      </div>
+
+      <h1>Tu Carrito</h1>
+      <p class="lead">Tienes <span id="itemsCount">3</span> items en tu carrito</p>
+
+      <div class="cart-list" id="cartList">
+        <!-- items added by JS -->
+      </div>
+    </div>
+</div>
+
+
+<aside class="panel">
+  <div class="header">
+    <h2>Resumen de compra</h2>
+  </div>
+
+  <!-- TICKET DINÁMICO -->
+  <div id="ticket-list" class="ticket-list"></div>
+
+  <div class="subtotal">
+    <div class="line"><div>Subtotal</div><div id="subtotalVal">$0</div></div>
+    <div class="line"><div>Envío</div><div id="shippingVal">$0</div></div>
+    <div class="line" style="font-weight:700;font-size:16px"><div>Total</div><div id="totalVal">$0</div></div>
+  </div>
+
+
+    <button class="total-btn">CHECKOUT</button>
+</aside>
+</div>
+</main>
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <p id="popup-message"></p>
+    <button id="popup-btn">Aceptar</button>
+  </div>
+</div>
+<div id="edit-popup" class="edit-popup hidden">
+  <div class="popup-box">
+    <h3>Editar talla / color</h3>
+
+    <select id="edit-select"></select>
+
+    <div class="edit-btns">
+      <button id="edit-confirm">Guardar</button>
+      <button id="edit-cancel">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/carrito.js"></script>
+</body>
+</html>

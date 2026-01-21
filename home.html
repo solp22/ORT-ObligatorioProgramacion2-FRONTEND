@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schiaparelli - Obligatorio Programación 2</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <a href="home.html"><img src="img/logo.png" alt="" /></a>
+      <nav>
+        <a href="home.html" class="hover-underline-animation">Inicio</a>
+        <a href="catalogo.html" class="hover-underline-animation">Catálogo</a>
+        <a href="carrito.html" class="hover-underline-animation">Carrito</a>
+      </nav>
+    </header>
+
+    <main>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="img/slider1.jpg" alt=""></div>
+    <div class="slide"><img src="img/slider2.jpg" alt=""></div>
+    <div class="slide"><img src="img/slider3.jpg" alt=""></div>
+  </div>
+
+  <div class="textoSlider">
+    <p>FALL- WINTER 25/26</p>
+    <h1>THE EVENING <br> CAPSULE</h1>
+    <a class="botonSlider" href="catalogo.html">EXPLORAR</a>
+  </div>
+
+  <span id="siguiente" class="material-symbols-outlined" style="font-size: 80px; color: white">
+    chevron_right
+  </span>
+  <span id="anterior" class="material-symbols-outlined" style="font-size: 80px; color: white">
+    chevron_left
+  </span>
+</div>
+
+
+      <section id="destacados" class="contenedor">
+        <h2 data-aos="fade-up" data-aos-duration="1000">
+          Descubre los destacados de la colección
+        </h2>
+        <div
+          data-aos="zoom-in-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+          class="destacados-grid"
+        ></div>
+        <a
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          href="catalogo.html"
+          class="boton"
+          >VER MÁS</a
+        >
+      </section>
+
+      <section id="hero2">
+        <p>HAUTE COUTURE 25/26</p>
+        <h1>BACK TO THE FUTURE</h1>
+        <a href="catalogo.html" class="botonSlider"
+          >EXPLORAR</a
+        >
+      </section>
+
+      <section id="seleccion" class="contenedor">
+        <h2>Explora nuestra selección de productos</h2>
+        <div>
+          <a
+            data-aos-offset="100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+            href="catalogo.html"
+          >
+            <article id="pret">
+              <p>READY-TO-WEAR</p>
+            </article>
+          </a>
+          <a
+            data-aos-offset="100"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            data-aos-duration="500"
+            data-aos-duration="1000"
+            href="catalogo.html?type=Bolsos"
+          >
+            <article id="bolsos">
+              <p>BOLSOS</p>
+            </article>
+          </a>
+          <a
+            data-aos-offset="100"
+            data-aos="fade-up"
+            data-aos-delay="800"
+            data-aos-duration="1000"
+            href="catalogo.html?type=Joyas"
+          >
+            <article id="accesorios">
+              <p>JOYERÍA</p>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <section id="desfile" class="contenedor">
+        <img src="img/elsa.avif" alt="" />
+        <div>
+          <h2>UNA FUERTE HISTORIA Y VISIÓN</h2>
+          <p id="quote">“Para mí, diseñar vestidos no es una profesión, sino un arte.”</p>
+          <br>
+          <p>
+            Elsa Schiaparelli impregnó la moda del siglo XX con un espíritu creativo gracias a su imaginación inventiva y su visión revolucionaria sobre la ropa deportiva, la Alta Costura, el arte, las fragancias y los elementos cotidianos transformados en creaciones elaboradas. Sus colaboraciones icónicas con artistas como Dalí, Cocteau, Man Ray y Giacometti se volvieron legendarias.
+            <br>
+            <br>
+            Hoy en día, la Maison Schiaparelli cultiva este increíble legado, ofreciendo a las mujeres del siglo XXI la esencia de un estilo audaz y un atractivo atemporal.
+          </p>
+          <a href="" class="boton">DESCUBRÍ NUESTRO LEGADO</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="img/logoblanco.png" alt="" />
+      <p>Obligatorio Programación 2 - Sol Puente</p>
+      <div>
+        <a
+          href="https://www.instagram.com/schiaparelli/"
+          class="hover-underline-animation"
+          >Instagram</a
+        >
+        <a
+          href="https://www.tiktok.com/@schiaparelli_official"
+          class="hover-underline-animation"
+          >Tiktok</a
+        >
+        <a
+          href="https://x.com/Schiaparelli"
+          class="hover-underline-animation"
+          >Twitter</a
+        >
+        <a
+          href="https://www.facebook.com/Schiaparelli/?locale=es_LA"
+          class="hover-underline-animation"
+          >Facebook</a
+        >
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/datos.js"></script>
+  <script src="js/home.js"></script>
+</html>

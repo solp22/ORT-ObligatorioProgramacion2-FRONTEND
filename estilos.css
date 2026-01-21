@@ -1,0 +1,932 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Albert Sans", sans-serif;
+}
+
+header {
+  background-color: white;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a img {
+  width: 200px;
+}
+
+#siguiente {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  cursor: pointer;
+}
+
+#anterior {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  cursor: pointer;
+}
+
+nav a {
+  margin-left: 1em;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: black;
+}
+
+h1{
+  text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+#destacados img, #sugerencia img {
+  width: 290px;
+}
+
+#destacados div,
+#seleccion div, #sugerencia div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boton{
+  color: black;
+  border: solid 1px black;
+  margin-top: 3em;
+  display: inline-block;
+  transition: 0.3s;
+  padding: 1.1em;
+  width: fit-content;
+  font-weight: 600;
+}
+
+.boton:hover {
+  background-color: black;
+  color: white;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#destacados h2,
+#seleccion h2, #sugerencia h2 {
+  text-align: center;
+  margin: 3em 0 2em 0;
+  font-weight: 300;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.reverse::after {
+  transform: scaleX(1);
+}
+
+.reverse:hover::after {
+  transform: scaleX(0);
+}
+
+.precio {
+  color: grey;
+}
+
+#hero2{
+  background-image: url(img/hauteCouture.webp);
+  background-size: cover;
+  background-position: bottom;
+  min-height: 80vh;
+  align-content: center;
+  text-align: center;
+  color: white;
+}
+
+#destacados article p:nth-of-type(1) {
+  margin-top: 0.5em;
+}
+
+#destacados, #sugerencia {
+  margin-bottom: 5em;
+  text-align: center;
+}
+
+#destacados img, #sugerencia img{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#destacados img:hover, #sugerencia img:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#seleccion{
+  margin-bottom: 5em;
+}
+
+#seleccion img {
+  width: 380px;
+}
+
+#seleccion article {
+  background-size: cover;
+  width: 380px;
+  height: 570px;
+  color: white;
+  background-blend-mode: multiply;
+  align-content: end;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#seleccion article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#seleccion article p {
+  font-weight: 300;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+#pret {
+  background-image: url(img/ready.avif),
+    linear-gradient(to top, rgba(0, 0, 0, 0.81), rgba(0, 0, 0, 0) 50%);
+}
+
+#bolsos {
+  background-image: url(img/bolsos.avif),
+    linear-gradient(to top, rgba(0, 0, 0, 0.81), rgba(0, 0, 0, 0) 50%);
+}
+
+#accesorios {
+  background-image: url(img/joyeria.avif),
+    linear-gradient(to top, rgba(0, 0, 0, 0.81), rgba(0, 0, 0, 0) 50%);
+}
+
+#desfile img {
+  width: 50%;
+}
+
+#quote{
+  color: #c09f70;
+}
+
+#desfile {
+  margin-top: 8em;
+  display: flex;
+  text-align: left;
+  line-height: 1.6;
+  margin-bottom: 8em;
+}
+
+#desfile div {
+  align-content: center;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#desfile h2 {
+  
+  font-weight: 400;
+  font-size: 1.8em;
+  margin-bottom: 1em;
+}
+
+
+footer {
+  background-color: black;
+  padding: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-weight: 300;
+}
+
+footer img {
+  width: 150px;
+}
+
+footer a {
+  color: white;
+  margin-left: 1em;
+}
+
+
+
+footer .hover-underline-animation::after{
+    background-color: white;
+
+}
+
+
+
+/* ---- CATALOGO ---- */
+#catalogoHero {
+  background-image: url(img/catalogo.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  align-content: center;
+  text-align: center;
+  color: white;
+ text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.496);
+  margin-bottom: 6em;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
+.product-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  color: grey;
+  font-weight: 400;
+}
+
+#searchBar {
+  width: 19rem;
+  height: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 0.5em;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+#searchBar:focus {
+  outline: none;
+}
+
+.search-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+#search-icon {
+  margin-top: 0.2em;
+  margin-right: 0.2em;
+}
+
+#slcTipos {
+  width: 20rem;
+  height: 2rem;
+  margin: 0 0 2rem 0;
+  padding-left: 0.5em;
+  border: none;
+  border-bottom: 1px solid black;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+
+
+/* ----- AMPLIACION ------- */
+.profile {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3em;
+  margin-top: 2em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 600px;
+  margin-right: 3em;
+}
+
+.profile-info {
+  margin-top: 3em;
+  padding-right: 1.5em;
+}
+
+#nombre {
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 0.6em;
+}
+
+#precioProd {
+  font-size: 1.2rem;
+  color: grey;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+#descripcion {
+  max-width: 400px;
+}
+
+#selectProd {
+  width: 20rem;
+  height: 2rem;
+  margin: 2rem 0 2rem 0;
+  padding-left: 0.5em;
+  border: none;
+  border-bottom: 1px solid black;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+}
+
+#enviar,
+button {
+  display: block;
+  border: 1px solid black;
+  padding: 0.7em 5em 0.7em 5em;
+  color: white;
+  background-color: black;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+#enviar {
+  padding: 0;
+}
+
+#enviar:hover,
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+#sugerencia{
+  max-width: 1000px;
+}
+
+.miniaturas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2em;
+}
+
+.miniatura {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+.miniatura:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#ampliacionProd{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+
+
+/* ------CONTACTO------- */
+form {
+  position: relative;
+}
+
+.form input,
+.form select,
+textarea {
+  border: none;
+  border-bottom: 1px gray solid;
+  width: 13rem;
+  height: 2rem;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-left: 0.5em;
+}
+
+.form input:hover,
+.form input:focus,
+.form select:hover,
+textarea:hover,
+textarea:focus {
+  border-bottom: 1px black solid;
+}
+
+.form input.error,
+.form select.error,
+.form textarea.error {
+  border-bottom: 1px red solid;
+}
+
+.izq {
+  margin-left: 1em;
+}
+
+.form h2 {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form section {
+  padding: 5em;
+}
+
+textarea {
+  margin-top: 1em;
+  height: 120px;
+  resize: none;
+  width: 27rem;
+  display: block;
+  background-color: rgb(242, 242, 242);
+  padding: 1em;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.form #enviar {
+  width: 100%;
+}
+
+.textoError {
+  position: absolute;
+  font-size: 0.7em;
+  color: red;
+}
+
+#nomError {
+  top: 125px;
+}
+
+#apellidoError {
+  top: 125px;
+  right: 115px;
+}
+
+#paisError {
+  top: 210px;
+}
+
+#telefonoError {
+  top: 210px;
+  right: 60px;
+}
+
+#emailError {
+  top: 295px;
+}
+
+#msjError {
+  bottom: 65px;
+}
+
+.form textarea.error {
+  background-color: rgb(255, 236, 236);
+}
+
+
+
+/* ------MODAL------- */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 550px;
+  height: 400px;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  text-align: center;
+  padding: 2em;
+}
+
+.modal-container.active .modal {
+  transform: scale(1);
+}
+
+.modal-text {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+   display: flex;
+}
+
+.modal-text h2 {
+  font-size: 24px;
+  margin-bottom: 1.5em;
+  margin-top: 0.8em;
+  color: black;
+  font-weight: 400;
+}
+
+.modal-text a {
+  background-color: black;
+  color: white;
+
+  
+  padding: 0.8em;
+  display: inline-block;
+  width: 220px;
+  margin: 0 auto;
+  transition: 0.2s;
+  border: 1px solid black;
+}
+
+.modal-text a:hover{
+  background-color: white;
+  color: black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  font-size: 24px;
+  color: black;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0 1em;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: grey;
+}
+
+.hidden{
+  display: none;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+   min-height: 70vh;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.textoSlider {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 50%;
+  
+  z-index: 3;
+}
+
+.textoSlider h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.textoSlider p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.botonSlider{
+  color: black;
+  background-color: white;
+  padding: 1.1em;
+  margin-top: 3em;
+  display: block;
+  width: fit-content;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.botonSlider:hover{
+  color: white;
+  background-color: black;
+}
+
+#hero2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra vertical */
+  align-items: center;      /* centra horizontal */
+  gap: 1em;                 /* separa p, h1, a */
+}
+
+#hero2 a {
+  margin-top: 0.8em;
+}
+
+
+.container {
+
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  width: 250px;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 12px;
+  color: #333;
+  margin-top: 25px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 12px 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 1px solid black;
+}
+
+.error {
+  color: #d94444;
+  font-size: 12px;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+.btn {
+  padding: 14px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.black-btn {
+  background: black;
+  color: white;
+  border: none;
+}
+
+.black-btn:hover{
+  background-color: #333;
+  color: white;
+}
+
+.white-btn {
+  background: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.white-btn:hover{
+  color: #a2a2a2;
+}
+
+
+#divLogin,
+#loginFoto
+{
+  width: 50%;
+  padding: 3em;
+}
+
+#loginFoto {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#divLogin{
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+
+.black-btn.loading {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #c09f70;
+  text-decoration: none;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
+
+/* --- POPUP --- */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: opacity .3s ease;
+}
+
+.popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup-content {
+  background: white;
+  padding: 5em;
+  width: 400px;
+  text-align: center;
+  animation: fadeIn .35s ease;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+  border: 1px solid #e9e9e9;
+}
+
+.popup-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.popup-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.popup-text {
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #444;
+  margin-top: 2em;
+}
+
+.popup-btn {
+  background: black;
+  color: white;
+  padding: 12px 20px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .2s ease;
+    margin-top: 2em;
+      border: 1px solid black;
+
+
+}
+
+.popup-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+@keyframes fadeIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}

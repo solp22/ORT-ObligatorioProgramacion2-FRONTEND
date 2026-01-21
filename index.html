@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schiaparelli - Obligatorio Programación 2</title>    
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body id="bodyLogin">
+  
+  <div class="container">
+    <div id="divLogin">
+      <img src="img/logo.png" alt="Logo" class="logo">
+      <h2 class="title">INICIA SESIÓN</h2>
+
+      <form id="loginForm" class="login-form">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" required />
+        <p class="error" id="emailError"></p>
+
+        <label for="password">CONTRASEÑA</label>
+        <input type="password" id="password" required />    
+        <p class="error" id="passwordError"></p>
+
+        <button type="submit" class="btn black-btn">INICIAR SESIÓN</button>
+        <button type="button" class="btn white-btn">REGÍSTRATE</button>
+      </form>
+  </div>
+   <div id="loginFoto"><img src="img/login.jpeg" alt=""></div>
+
+</div>
+  </body>
+<script type="module" src="js/formLogin.js"></script>
+</html>
